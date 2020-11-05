@@ -1,0 +1,12 @@
+/* main */
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+     /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+  }
+  

@@ -1,5 +1,6 @@
 /* Default styles */
 
+@import 'src/assets/sass/normalize';
 @import 'src/assets/sass/vars';
 
 *,
@@ -23,5 +24,8 @@ body {
     min-height: -webkit-fill-available;
 }
 
+
+@import 'src/assets/sass/blocks/main';
 @import 'src/assets/sass/blocks/form';
 @import 'src/assets/sass/blocks/radio_btn';
+@import 'src/assets/sass/blocks/select';
