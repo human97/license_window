@@ -2,4 +2,40 @@
 layout: default
 title: HomePage
 ---
-<h1>{{ data.project }}</h1>
+<main class="main">
+    <h1>{{ data.project }}</h1>
+    <form class="form" id="form">
+        <div class="radio_btn">
+            <div class="radio">
+                <label for="licensePlan1" class="radio__label">
+                    <input class="plan" type="radio" name="license" id="licensePlan1" value="13">
+                    <span class="radio_text">license plan #1</span>
+                </label>
+                <p class="license_cost">$13 per license</p>
+            </div>
+
+            <div class="radio">
+                <label for="licensePlan2" class="radio__label">
+                    <input class="plan" type="radio" name="license" id="licensePlan2" value="22">
+                    <span class="radio_text">license plan #2</span>
+                </label>
+                <p class="license_cost">$22 per license</p>
+            </div>
+
+            <div class="radio">
+                <label for="licensePlan3" class="radio__label">
+                    <input class="plan" type="radio" name="license" id="licensePlan3" value="34" checked>
+                    <span class="radio_text">license plan #3</span>
+                </label>
+                <p class="license_cost">$34 per license</p>
+            </div>
+        </div>
+
+<div class="number">
+    <select name="" id=""></select>
+</div>
+
+    </form>
+    <!-- /.form -->
+</main>
+<!-- /.main -->

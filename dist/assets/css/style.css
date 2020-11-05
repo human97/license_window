@@ -21,6 +21,75 @@ body {
 }
 
 /*block*/
-body {
-    font-size: 24px;
+.form {
+    margin: auto;
+    width: 400px;
+    border: 7px solid #ccc;
+    background: #f3f3f3;
+    padding: 20px 10px;
+}
+
+.radio_btn {
+    padding: 0 0 5px 0;
+}
+
+.radio {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 15px;
+}
+
+.radio:hover {
+    border: 1px solid #c1d9fc;
+    background: rgba(191, 225, 253, 0.3);
+}
+
+.radio_text {
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.radio_text::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid 3px #ccc;
+    background: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.radio_text::after {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3876e9;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.plan {
+    display: none;
+}
+
+.plan:checked + .radio_text::after {
+    opacity: 1;
+}
+
+.plan:checked + .radio_text::before {
+    border-color: #3f5788;
+    background: rgba(191, 225, 253, 0.3);
 }
