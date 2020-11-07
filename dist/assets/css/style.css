@@ -390,11 +390,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px 0 15px;
-}
-
-.radio:hover {
-    border: 1px solid #c1d9fc;
-    background: rgba(191, 225, 253, 0.3);
+    border: 1px solid transparent;
 }
 
 .radio_text {
@@ -402,7 +398,6 @@ body {
     position: relative;
     padding: 0 0 0 30px;
     display: inline-block;
-    text-align: center;
 }
 
 .radio_text::before {
@@ -436,6 +431,11 @@ body {
     display: none;
 }
 
+.plan:checked + .radio {
+    border: 1px solid #c1d9fc;
+    background: #bfe1fd4d;
+}
+
 .plan:checked + .radio_text::after {
     opacity: 1;
 }
@@ -453,4 +453,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 6px;
+}
+
+.number_select {
+    border-color: #c1d9fc;
+    border-radius: 2px;
+    background: #fff;
 }

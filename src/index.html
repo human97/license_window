@@ -14,7 +14,7 @@ title: HomePage
                     </label>
                     <p class="license_cost">$13 per license</p>
                 </div>
-    
+
                 <div class="radio">
                     <label for="licensePlan2" class="radio__label">
                         <input class="plan" type="radio" name="license" id="licensePlan2" value="22">
@@ -22,7 +22,7 @@ title: HomePage
                     </label>
                     <p class="license_cost">$22 per license</p>
                 </div>
-    
+
                 <div class="radio">
                     <label for="licensePlan3" class="radio__label">
                         <input class="plan" type="radio" name="license" id="licensePlan3" value="34" checked>
@@ -31,10 +31,10 @@ title: HomePage
                     <p class="license_cost">$34 per license</p>
                 </div>
             </div>
-    
+
             <div class="number">
                 <p class="number_text">Number of license:&nbsp;
-                    <select name="number_select" id="numberSelect">
+                    <select name="number_select" class="number_select" id="numberSelect">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -48,9 +48,14 @@ title: HomePage
                         <option value="100">100</option>
                     </select>
                 </p>
-                
             </div>
-    
+
+            <div class="total_wrapper">
+                <p class="total_text">total: <span class="total_price"></span></p>
+                <button class="btn_byu_now">byu now</button>
+                <p class="selected_plan">Selected plan: #<span id="selPlanNum"></span></p>
+            </div>
+
         </form>
         <!-- /.form -->
     </div>
