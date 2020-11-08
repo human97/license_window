@@ -1,4 +1,44 @@
 /* Default styles */
+@font-face {
+    font-family: 'Bebas Neue';
+  src: url("../fonts/BebasNeueRegular.eot");
+  src: local("Bebas Neue Regular"), local("BebasNeueRegular"), url("../fonts/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueRegular.woff") format("woff"), url("../fonts/BebasNeueRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+  src: url("BebasNeueBold.eot");
+  src: local("Bebas Neue Bold"), local("BebasNeueBold"), url("BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("BebasNeueBold.woff") format("woff"), url("BebasNeueBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+  src: url("BebasNeueLight.eot");
+  src: local("Bebas Neue Light"), local("BebasNeueLight"), url("BebasNeueLight.eot?#iefix") format("embedded-opentype"), url("BebasNeueLight.woff") format("woff"), url("BebasNeueLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+  src: url("BebasNeue-Thin.eot");
+  src: local("Bebas Neue Thin"), local("BebasNeue-Thin"), url("BebasNeue-Thin.eot?#iefix") format("embedded-opentype"), url("BebasNeue-Thin.woff") format("woff"), url("BebasNeue-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+  src: url("BebasNeueBook.eot");
+  src: local("Bebas Neue Book"), local("BebasNeueBook"), url("BebasNeueBook.eot?#iefix") format("embedded-opentype"), url("BebasNeueBook.woff") format("woff"), url("BebasNeueBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -374,9 +414,9 @@ body {
 .form {
     margin: auto;
     width: 400px;
-    border: 7px solid #ccc;
+    border: 7px solid #e7e7e7;
     background: #f3f3f3;
-    padding: 20px 10px;
+    padding: 25px 10px;
 }
 
 /* radio_btn */
@@ -394,6 +434,11 @@ body {
 }
 
 .radio_text {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-style: normal;
+    color: #636161;
+    text-transform: uppercase;
     cursor: pointer;
     position: relative;
     padding: 0 0 0 30px;
@@ -445,6 +490,11 @@ body {
     background: rgba(191, 225, 253, 0.3);
 }
 
+.license_cost {
+    font-size: small;
+    color: #8a8787;
+}
+
 /* select */
 .number {
     height: 50px;
@@ -457,7 +507,41 @@ body {
 }
 
 .number_select {
-    border-color: #c1d9fc;
+    border: solid 2px #c1d9fc;
     border-radius: 2px;
     background: #fff;
+}
+
+/* total_block */
+.total_wrapper {
+    padding: 20px 0 0 0;
+}
+
+.total_text {
+    text-transform: uppercase;
+}
+
+.total_price {
+    color: #3876e9;
+    font-weight: bold;
+}
+
+.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: small;
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    background: #049e5e;
+}
+
+.btn_byu--margin {
+    margin: 10px 0 30px;
+}
+
+.selected_plan {
+    color: #3876e9;
+    font-size: small;
 }

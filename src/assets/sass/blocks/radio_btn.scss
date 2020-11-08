@@ -15,6 +15,11 @@
 
 // << стилизация радио кнопок
 .radio_text {
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-style: normal;
+    color: #636161;
+    text-transform: uppercase;
     cursor: pointer;
     position: relative;
     padding: 0 0 0 30px;
@@ -66,3 +71,8 @@
     }
 }
 // стилизация радио кнопок >>
+
+.license_cost{
+    font-size: small;
+    color: #8a8787;
+}

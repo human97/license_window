@@ -1,4 +1,4 @@
-// comp
+// license_window
 
 const form = document.getElementById('form')
 const allRadio = form.querySelectorAll('.plan')
@@ -36,4 +36,9 @@ form.addEventListener('click', function (e) {
     if (clickCount === 'plan' || 'number_select') {
         count()
     }
+})
+
+
+document.getElementById('btn_byu').addEventListener('click', function (e) {
+    e.preventDefault();
 })

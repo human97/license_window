@@ -1,1 +1,1 @@
-//=  components/comp.js
+//=  components/license_window.js

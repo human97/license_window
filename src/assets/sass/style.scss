@@ -1,5 +1,6 @@
 /* Default styles */
 
+@import 'src/assets/sass/fonts';
 @import 'src/assets/sass/normalize';
 @import 'src/assets/sass/vars';
 
@@ -29,3 +30,4 @@ body {
 @import 'src/assets/sass/blocks/form';
 @import 'src/assets/sass/blocks/radio_btn';
 @import 'src/assets/sass/blocks/select';
+@import 'src/assets/sass/blocks/total_block';
