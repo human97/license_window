@@ -1,6 +1,9 @@
 "use strict";
 
-const {src, dest} = require("gulp");
+const {
+    src,
+    dest
+} = require("gulp");
 const gulp = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const cssbeautify = require("gulp-cssbeautify");
@@ -25,25 +28,29 @@ var path = {
         html: "dist/",
         js: "dist/assets/js/",
         css: "dist/assets/css/",
-        images: "dist/assets/img/"
+        images: "dist/assets/img/",
+        fonts: "dist/assets/fonts/"
     },
     src: {
         html: "src/*.html",
         js: "src/assets/js/*.js",
         css: "src/assets/sass/style.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        fonts: "src/assets/fonts/**/*"
     },
     watch: {
         html: "src/**/*.html",
         js: "src/assets/js/**/*.js",
         css: "src/assets/sass/**/*.scss",
-        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}"
+        images: "src/assets/img/**/*.{jpg,png,svg,gif,ico}",
+        fonts: "dist/assets/fonts/**/*"
     },
     clean: "./dist"
 }
 
 
 /* Tasks */
+
 function browserSync(done) {
     browsersync.init({
         server: {
@@ -59,7 +66,9 @@ function browserSyncReload(done) {
 
 function html() {
     panini.refresh();
-    return src(path.src.html, { base: "src/" })
+    return src(path.src.html, {
+            base: "src/"
+        })
         .pipe(plumber())
         .pipe(panini({
             root: 'src/',
@@ -73,7 +82,9 @@ function html() {
 }
 
 function css() {
-    return src(path.src.css, { base: "src/assets/sass/" })
+    return src(path.src.css, {
+            base: "src/assets/sass/"
+        })
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer({
@@ -98,14 +109,16 @@ function css() {
 }
 
 function js() {
-    return src(path.src.js, {base: './src/assets/js/'})
+    return src(path.src.js, {
+            base: './src/assets/js/'
+        })
         .pipe(plumber())
         .pipe(babel({
             presets: ['@babel/env']
         }))
         .pipe(rigger())
         .pipe(gulp.dest(path.build.js))
-        pipe(uglify())
+        .pipe(uglify())
         .pipe(rename({
             suffix: ".min",
             extname: ".js"
@@ -120,6 +133,11 @@ function images() {
         .pipe(dest(path.build.images));
 }
 
+function fonts() {
+    return src(path.src.fonts)
+        .pipe(dest(path.build.fonts));
+}
+
 function clean() {
     return del(path.clean);
 }
@@ -129,9 +147,10 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.images], images);
+    gulp.watch([path.watch.fonts], fonts);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 
@@ -140,6 +159,7 @@ exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
+exports.fonts = fonts;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;

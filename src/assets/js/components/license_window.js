@@ -34,7 +34,7 @@ const count = () => {
 count()
 
 // 
-form.addEventListener('click', function (e) {
+form.addEventListener('inter', function (e) {
     let clickCount = e.target.className
     if (clickCount === 'plan' || 'number_select') {
         count()

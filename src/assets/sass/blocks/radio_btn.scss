@@ -61,18 +61,19 @@
         background: #bfe1fd4d;
     }
 
-    &:checked+.radio_text::after{
+    &:checked+.radio_text::after {
         opacity: 1;
     }
 
-    &:checked+.radio_text::before{
+    &:checked+.radio_text::before {
         border-color: rgb(63, 87, 136);
         background: rgba(191, 225, 253, .3);
     }
 }
+
 // стилизация радио кнопок >>
 
-.license_cost{
+.license_cost {
     font-size: small;
     color: #8a8787;
 }
